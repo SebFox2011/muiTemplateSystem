@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles } from "@material-ui/core";
+import { withStyles } from "@material-ui/core"
 
 const SideMenu = ({classes}) => {
     return (
@@ -20,4 +20,4 @@ const style = {
         backgroundColor: '#253053'
     }
 }
-export default withStyles(style)(SideMenu);
+export default withStyles(style)(SideMenu)

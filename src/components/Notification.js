@@ -1,13 +1,13 @@
 import React from 'react'
-import { Snackbar, makeStyles } from '@material-ui/core';
-import { Alert } from '@material-ui/lab';
+import { Snackbar, makeStyles } from '@material-ui/core'
+import { Alert } from '@material-ui/lab'
 
 export default function Notification({ notify, setNotify }) {
     const classes = useStyles()
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
-            return;
+            return
         }
         setNotify({
             ...notify,

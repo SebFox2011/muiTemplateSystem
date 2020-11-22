@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
-import { Grid, } from '@material-ui/core';
-import Controls from "../../components/controls/Controls";
-import { useForm, Form } from '../../components/useForm';
-import * as employeeService from "../../services/employeeService";
+import { Grid, } from '@material-ui/core'
+import Controls from "../../components/controls/Controls"
+import { useForm, Form } from '../../components/useForm'
+import * as employeeService from "../../services/employeeService"
 
 
 const genderItems = [
     { id: 'male', title: 'Male' },
-    { id: 'female', title: 'Female' },
-    { id: 'other', title: 'Other' },
+    { id: 'female', title: 'Female' }
 ]
 
 const initialFValues = {
@@ -44,12 +43,12 @@ export default function EmployeeForm({ addOrEdit, recordForEdit }) {
     }
 
     const {values, setValues, errors, setErrors, 
-        handleInputChange, resetForm } = useForm(initialFValues, true, validate);
+        handleInputChange, resetForm } = useForm(initialFValues, true, validate)
 
     const handleSubmit = e => {
         e.preventDefault()
         if (validate()) {
-            addOrEdit(values, resetForm);
+            addOrEdit(values, resetForm)
         }
     }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as MuiButton, makeStyles } from "@material-ui/core";
+import { Button as MuiButton, makeStyles } from "@material-ui/core"
 
 
 const useStyles = makeStyles(theme => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 export default function Button(props) {
 
     const { text, size, color, variant, onClick, ...other } = props
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <MuiButton

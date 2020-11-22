@@ -1,7 +1,7 @@
 import React from 'react'
 import { Dialog, DialogTitle, DialogContent, DialogActions, Typography, makeStyles, IconButton } from '@material-ui/core'
-import Controls from "./controls/Controls";
-import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
+import Controls from "./controls/Controls"
+import NotListedLocationIcon from '@material-ui/icons/NotListedLocation'
 
 export default function ConfirmDialog({ confirmDialog, setConfirmDialog }) {
     const classes = useStyles()

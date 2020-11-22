@@ -1,11 +1,26 @@
-import React from 'react';
-import SideMenu from "../components/SideMenu";
-import { makeStyles, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core';
-import Header from "../components/Header";
-import PageHeader from '../components/PageHeader';
-import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import React from 'react'
+import SideMenu from "../components/SideMenu"
+import { makeStyles, CssBaseline, createMuiTheme, ThemeProvider } from '@material-ui/core'
+import Header from "../components/Header"
+import PageHeader from '../components/PageHeader'
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew'
 
-import Employees from "../pages/Employees/Employees";
+import Employees from "../pages/Employees/Employees"
+
+function App() {
+  const classes = useStyles()
+
+  return (
+    <ThemeProvider theme={theme}>
+      <SideMenu />
+      <div className={classes.appMain}>
+        <Header />    
+        <Employees />
+      </div>
+      <CssBaseline />
+    </ThemeProvider>
+  )
+}
 
 const useStyles = makeStyles({
   appMain: {
@@ -14,23 +29,8 @@ const useStyles = makeStyles({
   }
 })
 
-function App() {
-  const classes = useStyles();
 
-  return (
-    <ThemeProvider theme={theme}>
-      <PageHeader title={'Mon titre'} subTitle={'Mon subtitle'} icon ={<PowerSettingsNewIcon />}/>
-      <SideMenu />
-      <div className={classes.appMain}>
-        <Header />    
-        <Employees />
-      </div>
-      <CssBaseline />
-    </ThemeProvider>
-  );
-}
-
-export default App;
+export default App
 
 const theme = createMuiTheme({
   palette: {

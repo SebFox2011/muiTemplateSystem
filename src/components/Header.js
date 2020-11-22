@@ -1,12 +1,12 @@
 import React from 'react'
 import { AppBar, Toolbar, Grid, InputBase, IconButton, Badge, makeStyles } from '@material-ui/core'
-import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import SearchIcon from '@material-ui/icons/Search';
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone'
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline'
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew'
+import SearchIcon from '@material-ui/icons/Search'
 
 export default function Header() {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <AppBar position="static" className={classes.root}>
@@ -20,7 +20,6 @@ export default function Header() {
                             placeholder="Search topics"
                             className={classes.searchInput}
                             startAdornment={<SearchIcon fontSize="small" />}
-                            endAdornment={<SearchIcon fontSize="small" />}
                         />
                     </Grid>
                     <Grid item md></Grid>        

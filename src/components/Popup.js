@@ -1,10 +1,10 @@
 import React from 'react'
-import { Dialog, DialogTitle, DialogContent, makeStyles, Typography } from '@material-ui/core';
-import Controls from "./controls/Controls";
-import CloseIcon from '@material-ui/icons/Close';
+import { Dialog, DialogTitle, DialogContent, makeStyles, Typography } from '@material-ui/core'
+import Controls from "./controls/Controls"
+import CloseIcon from '@material-ui/icons/Close'
 
 export default function Popup({ title, children, openPopup, setOpenPopup }) {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <Dialog open={openPopup} maxWidth="md" classes={{ paper: classes.dialogWrapper }}>

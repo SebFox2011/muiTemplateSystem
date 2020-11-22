@@ -3,7 +3,7 @@ import { Paper, Card, Typography, makeStyles } from '@material-ui/core'
 
 export default function PageHeader({ title, subTitle, icon }) {
 
-    const classes = useStyles();
+    const classes = useStyles()
     return (
         <Paper elevation={0} square className={classes.root}>
             <div className={classes.pageHeader}>
