@@ -1,10 +1,7 @@
 import React from 'react'
 import { FormControl, FormLabel, RadioGroup as MuiRadioGroup, FormControlLabel, Radio } from '@material-ui/core'
 
-export default function RadioGroup(props) {
-
-    const { name, label, value, onChange, items } = props
-
+export default function RadioGroup({ name, label, value, onChange, items }) {
     return (
         <FormControl>
             <FormLabel>{label}</FormLabel>
@@ -13,8 +10,7 @@ export default function RadioGroup(props) {
                 value={value}
                 onChange={onChange}>
                 {
-                    items.map(
-                        item => (
+                    items.map(item => (
                             <FormControlLabel key={item.id} value={item.id} control={<Radio />} label={item.title} />
                         )
                     )
